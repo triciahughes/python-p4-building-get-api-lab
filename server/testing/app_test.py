@@ -99,7 +99,7 @@ class TestApp:
         assert(response.status_code == 200)
 
     def test_most_expensive_baked_good_route_returns_json(self):
-        '''provides a response content type of application/json at "/bakeries/<int:id>"'''
+        '''provides a response content type of application/json at "/bakeries/most_expensive"'''
         response = app.test_client().get('/baked_goods/most_expensive')
         assert response.content_type == 'application/json'
 
